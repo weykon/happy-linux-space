@@ -1,0 +1,82 @@
+{
+  "app": {
+    "title": "Happy Linux Cheatbook",
+    "subtitle": "甜品级 Linux 命令学习指南",
+    "description": "把常用命令拟人成故事、用口味记参数、再把管道想成圣代拼装。灵感来自 spec-workflow MCP 的规划流，我们把每个指令变成可爱便利贴，帮助你几秒钟内重构知识地图。",
+    "tags": {
+      "tech": "Tailwind + React",
+      "style": "Apple 风格排版",
+      "concept": "管道心智模型"
+    }
+  },
+  "sections": {
+    "memoryFramework": {
+      "commandRole": {
+        "title": "命令 = 角色人设",
+        "detail": "给每个命令安排一个舞台角色（舞监、侦探、编剧、收藏家），看到命令时脑内就能自动播放剧情。"
+      },
+      "parameterFlavor": {
+        "title": "参数 = 冰淇淋口味",
+        "detail": "旗标像不同口味的球：-a 是 ALL（杏仁），-h 是 human（牛奶），通过味觉联想记忆用途。"
+      },
+      "pipelineSundae": {
+        "title": "管道 = 拼装圣代",
+        "detail": "每一步是不同层次：底层海绵（ls），中层果酱（grep），顶层奶油（awk/tar）。组合就能讲完故事。"
+      },
+      "alternativeIngredients": {
+        "title": "竞品 = 平替配料",
+        "detail": "当场景变化（性能 / 彩色输出 / JSON）时，想到可以换成 eza、rg、jq 等平替，保持味道一致。"
+      }
+    },
+    "commandStories": {
+      "title": "命令故事集",
+      "subtitle": "从左脑（历史、功能）到右脑（比喻、味道），一张卡片讲完记忆钩子。"
+    },
+    "pipelineLab": {
+      "title": "Pipeline 圣代实验室",
+      "subtitle": "像调制甜品那样组合指令：底味负责选择，夹心负责过滤，顶饰负责呈现。"
+    },
+    "systemConcepts": {
+      "title": "系统概念篇",
+      "subtitle": "从剧院运作理解系统原理：门票系统、布局图、节目调度...甜品级学习Linux核心概念。"
+    }
+  },
+  "commandCard": {
+    "memoryTag": "记忆标签",
+    "historyFlashcard": "历史闪卡",
+    "coreFocus": "核心功能",
+    "parameterSticky": "参数便利贴",
+    "alternatives": "竞品平替",
+    "pipelineSpark": "管道灵感"
+  },
+  "conceptCard": {
+    "conceptStory": "概念故事",
+    "keyPoints": "核心知识点",
+    "useCases": "实战场景",
+    "systemThinking": "系统思维"
+  },
+  "modes": {
+    "beginner": "新手模式",
+    "professional": "专业模式",
+    "beginnerDesc": "趣味比喻 + 记忆技巧",
+    "professionalDesc": "实战场景 + 技术文档"
+  },
+  "tabs": {
+    "scenario": "按使用场景",
+    "frequency": "按使用频率",
+    "difficulty": "按学习难度",
+    "all": "全部命令",
+    "topic": "按主题分类"
+  },
+  "conceptTabs": {
+    "all": "全部概念",
+    "security": "安全权限",
+    "system": "系统管理",
+    "networking": "网络通信",
+    "development": "开发工具"
+  },
+  "search": {
+    "placeholder": "搜索命令、概念、场景、参数...",
+    "noResults": "未找到匹配的内容"
+  }
+}

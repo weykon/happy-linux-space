@@ -1,0 +1,82 @@
+{
+  "app": {
+    "title": "Happy Linux Cheatbook",
+    "subtitle": "Elegant as Apple's blog, but with a flavor twist for Linux mastery",
+    "description": "Transform commands into character stories, parameters into memorable flavors, and pipelines into layered desserts. Inspired by spec-workflow MCP planning, we turn every instruction into sticky notes that reconstruct your knowledge map in seconds.",
+    "tags": {
+      "tech": "Tailwind + React",
+      "style": "Apple-inspired typography",
+      "concept": "Pipeline mental model"
+    }
+  },
+  "sections": {
+    "memoryFramework": {
+      "commandRole": {
+        "title": "Commands = Characters",
+        "detail": "Assign each command a stage role (manager, detective, editor, curator). When you see the command, your mind plays the scene automatically."
+      },
+      "parameterFlavor": {
+        "title": "Parameters = Flavor Profiles",
+        "detail": "Flags are like different scoops: -a is ALL (almond), -h is human (hazelnut). Use taste associations to remember their purpose."
+      },
+      "pipelineSundae": {
+        "title": "Pipelines = Layered Desserts",
+        "detail": "Each step is a different layer: base sponge (ls), middle jam (grep), top cream (awk/tar). Combine them to tell the complete story."
+      },
+      "alternativeIngredients": {
+        "title": "Alternatives = Substitute Ingredients",
+        "detail": "When scenarios change (performance / colored output / JSON), swap to eza, rg, jq and keep the same taste."
+      }
+    },
+    "commandStories": {
+      "title": "Command Stories",
+      "subtitle": "From left-brain (history, function) to right-brain (metaphor, flavor), one card completes the memory hook."
+    },
+    "pipelineLab": {
+      "title": "Pipeline Sundae Lab",
+      "subtitle": "Mix commands like making desserts: base layer chooses, middle filters, top presents."
+    },
+    "systemConcepts": {
+      "title": "System Concepts",
+      "subtitle": "Understand system principles through theater operations: ticket system, layout map, show scheduling... dessert-level learning of Linux core concepts."
+    }
+  },
+  "commandCard": {
+    "memoryTag": "Memory Tag",
+    "historyFlashcard": "History Flashcard",
+    "coreFocus": "Core Focus",
+    "parameterSticky": "Parameter Notes",
+    "alternatives": "Modern Alternatives",
+    "pipelineSpark": "Pipeline Inspiration"
+  },
+  "conceptCard": {
+    "conceptStory": "Concept Story",
+    "keyPoints": "Key Points",
+    "useCases": "Use Cases",
+    "systemThinking": "System Thinking"
+  },
+  "modes": {
+    "beginner": "Beginner Mode",
+    "professional": "Professional Mode",
+    "beginnerDesc": "Fun metaphors + Memory tricks",
+    "professionalDesc": "Real scenarios + Technical docs"
+  },
+  "tabs": {
+    "scenario": "By Use Case",
+    "frequency": "By Frequency",
+    "difficulty": "By Difficulty",
+    "all": "All Commands",
+    "topic": "By Topic"
+  },
+  "conceptTabs": {
+    "all": "All Concepts",
+    "security": "Security & Permissions",
+    "system": "System Management",
+    "networking": "Network Communications",
+    "development": "Development Tools"
+  },
+  "search": {
+    "placeholder": "Search commands, concepts, scenarios, parameters...",
+    "noResults": "No matching content found"
+  }
+}
