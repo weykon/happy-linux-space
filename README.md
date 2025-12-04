@@ -1,12 +1,26 @@
 ## Happy Linux Cheatbook
 
-**Live at: [happylinux.space](https://happylinux.space)**
+**🌐 Live at: [happylinux.space](https://happylinux.space)**
 
-An elegant Apple-style learning tool that transforms 20 high-frequency Linux commands into bilingual stories with dual-track learning (Beginner/Professional). Built with React + Tailwind.
+An elegant, Apple-inspired learning tool that teaches 20 essential Linux commands through memorable stories and metaphors. Features dual-language support (English/中文) and two learning modes (Beginner/Professional).
 
 优雅如 Apple 博客、却充满 Linux 学习灵感的 React + Tailwind 单页应用。把 20 个高频命令用双语故事化呈现，支持新手/专业双轨制学习。
 
-### 核心特性
+---
+
+### ✨ Core Features | 核心特性
+
+**English:**
+- 🌍 **Full Bilingual Support**: Seamlessly switch between English and Chinese (中文)
+- 🎨 **Dual Learning Modes**:
+  - **Beginner Mode**: Character personas + flavor metaphors + memory hooks
+  - **Professional Mode**: Real-world use cases + parameter guides + modern alternatives
+- 📊 **Multi-dimensional Navigation**: Browse by use case, frequency, difficulty, or view all
+- 🔍 **Smart Search**: Cross-language keyword search with real-time filtering
+- 🍰 **Pipeline Recipes**: Learn command pipelines through layered dessert analogies
+- 🚀 **Modern Alternatives**: Discover 2-3 modern replacements (eza, rg, jq) for each command
+
+**中文：**
 
 - **双语完全翻译**：中文/English 无缝切换，每个命令都有完整的双语内容
 - **双轨学习模式**：

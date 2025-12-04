@@ -1,53 +1,53 @@
 {
   "app": {
     "title": "Happy Linux Cheatbook",
-    "subtitle": "Elegant as Apple's blog, but with a flavor twist for Linux mastery",
-    "description": "Transform commands into character stories, parameters into memorable flavors, and pipelines into layered desserts. Inspired by spec-workflow MCP planning, we turn every instruction into sticky notes that reconstruct your knowledge map in seconds.",
+    "subtitle": "Learn Linux commands through stories and metaphors",
+    "description": "Transform commands into memorable characters, parameters into flavor profiles, and pipelines into layered recipes. Make Linux commands stick with visual metaphors and practical examples.",
     "tags": {
       "tech": "Tailwind + React",
-      "style": "Apple-inspired typography",
-      "concept": "Pipeline mental model"
+      "style": "Apple-inspired design",
+      "concept": "Visual learning model"
     }
   },
   "sections": {
     "memoryFramework": {
       "commandRole": {
         "title": "Commands = Characters",
-        "detail": "Assign each command a stage role (manager, detective, editor, curator). When you see the command, your mind plays the scene automatically."
+        "detail": "Each command has a personality (manager, detective, editor, curator). When you see the command, the character's story comes to mind automatically."
       },
       "parameterFlavor": {
-        "title": "Parameters = Flavor Profiles",
-        "detail": "Flags are like different scoops: -a is ALL (almond), -h is human (hazelnut). Use taste associations to remember their purpose."
+        "title": "Parameters = Flavors",
+        "detail": "Flags are like different flavors: -a is ALL (almond), -h is HUMAN-readable (hazelnut). Use taste associations to remember what they do."
       },
       "pipelineSundae": {
-        "title": "Pipelines = Layered Desserts",
-        "detail": "Each step is a different layer: base sponge (ls), middle jam (grep), top cream (awk/tar). Combine them to tell the complete story."
+        "title": "Pipelines = Layered Recipes",
+        "detail": "Each step is a different layer: base (ls), middle filter (grep), top presentation (awk/tar). Combine them to complete the task."
       },
       "alternativeIngredients": {
-        "title": "Alternatives = Substitute Ingredients",
-        "detail": "When scenarios change (performance / colored output / JSON), swap to eza, rg, jq and keep the same taste."
+        "title": "Alternatives = Better Tools",
+        "detail": "When you need more features (performance, colors, JSON), upgrade to modern tools like eza, rg, or jq."
       }
     },
     "commandStories": {
       "title": "Command Stories",
-      "subtitle": "From left-brain (history, function) to right-brain (metaphor, flavor), one card completes the memory hook."
+      "subtitle": "Learn both the technical details (history, function) and memorable metaphors (characters, flavors) in one place."
     },
     "pipelineLab": {
-      "title": "Pipeline Sundae Lab",
-      "subtitle": "Mix commands like making desserts: base layer chooses, middle filters, top presents."
+      "title": "Pipeline Recipes",
+      "subtitle": "Combine commands like a recipe: base layer selects data, middle layer filters it, top layer presents results."
     },
     "systemConcepts": {
       "title": "System Concepts",
-      "subtitle": "Understand system principles through theater operations: ticket system, layout map, show scheduling... dessert-level learning of Linux core concepts."
+      "subtitle": "Understand Linux systems through real-world analogies: permissions as access badges, processes as running shows, files as organized inventory."
     }
   },
   "commandCard": {
-    "memoryTag": "Memory Tag",
-    "historyFlashcard": "History Flashcard",
-    "coreFocus": "Core Focus",
-    "parameterSticky": "Parameter Notes",
+    "memoryTag": "Memory Hook",
+    "historyFlashcard": "History & Origin",
+    "coreFocus": "What It Does",
+    "parameterSticky": "Common Flags",
     "alternatives": "Modern Alternatives",
-    "pipelineSpark": "Pipeline Inspiration"
+    "pipelineSpark": "Pipeline Examples"
   },
   "conceptCard": {
     "conceptStory": "Concept Story",
