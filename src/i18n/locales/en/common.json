@@ -78,5 +78,32 @@
   "search": {
     "placeholder": "Search commands, concepts, scenarios, parameters...",
     "noResults": "No matching content found"
+  },
+  "categories": {
+    "file-operations": "File Operations",
+    "text-processing": "Text Processing",
+    "archives": "Archives & Compression",
+    "networking": "Networking",
+    "system-info": "System Info",
+    "permissions": "Permissions",
+    "high": "High Frequency",
+    "medium": "Medium Frequency",
+    "low": "Low Frequency",
+    "beginner": "Beginner",
+    "intermediate": "Intermediate",
+    "advanced": "Advanced"
+  },
+  "pipelineCategories": {
+    "all": "All",
+    "basic": "Basic",
+    "network": "Network",
+    "system": "System",
+    "analysis": "Analysis",
+    "development": "Development",
+    "security": "Security",
+    "advanced": "Advanced"
+  },
+  "pipelineResults": {
+    "count": "{{count}} pipeline combinations"
   }
 }

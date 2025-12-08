@@ -5,32 +5,23 @@ export default function PipelineLab({ recipes }) {
   const { t } = useTranslation('common')
   const [selectedCategory, setSelectedCategory] = useState('all')
 
-  // 获取所有分类
   const categories = [
-    { id: 'all', label: '全部', emoji: '🎭' },
-    { id: 'basic', label: '基础', emoji: '🌱' },
-    { id: 'network', label: '网络', emoji: '🌐' },
-    { id: 'system', label: '系统', emoji: '⚙️' },
-    { id: 'analysis', label: '分析', emoji: '📊' },
-    { id: 'development', label: '开发', emoji: '💻' },
-    { id: 'security', label: '安全', emoji: '🔐' },
-    { id: 'advanced', label: '高级', emoji: '🚀' }
+    { id: 'all', emoji: '🎭' },
+    { id: 'basic', emoji: '🌱' },
+    { id: 'network', emoji: '🌐' },
+    { id: 'system', emoji: '⚙️' },
+    { id: 'analysis', emoji: '📊' },
+    { id: 'development', emoji: '💻' },
+    { id: 'security', emoji: '🔐' },
+    { id: 'advanced', emoji: '🚀' }
   ]
 
-  // 难度标记颜色
   const difficultyColors = {
     beginner: 'bg-emerald-100 text-emerald-700',
     intermediate: 'bg-sky-100 text-sky-700',
     advanced: 'bg-purple-100 text-purple-700'
   }
 
-  const difficultyLabels = {
-    beginner: '入门',
-    intermediate: '进阶',
-    advanced: '高级'
-  }
-
-  // 过滤 recipes
   const filteredRecipes = selectedCategory === 'all'
     ? recipes
     : recipes.filter(r => r.category === selectedCategory)
@@ -42,7 +33,7 @@ export default function PipelineLab({ recipes }) {
         <p className="text-slate-500">{t('sections.pipelineLab.subtitle')}</p>
       </div>
 
-      {/* 分类筛选按钮 */}
+      {/* Category filter buttons */}
       <div className="mt-6 flex flex-wrap gap-2">
         {categories.map((cat) => (
           <button
@@ -55,12 +46,12 @@ export default function PipelineLab({ recipes }) {
             }`}
           >
             <span className="mr-1">{cat.emoji}</span>
-            {cat.label}
+            {t(`pipelineCategories.${cat.id}`)}
           </button>
         ))}
       </div>
 
-      {/* Pipeline 卡片网格 */}
+      {/* Pipeline cards grid */}
       <div className="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         {filteredRecipes.map((recipe) => (
           <div
@@ -73,7 +64,7 @@ export default function PipelineLab({ recipes }) {
               </p>
               {recipe.difficulty && (
                 <span className={`rounded-full px-2 py-1 text-xs font-medium ${difficultyColors[recipe.difficulty]}`}>
-                  {difficultyLabels[recipe.difficulty]}
+                  {t(`categories.${recipe.difficulty}`)}
                 </span>
               )}
             </div>
@@ -85,9 +76,9 @@ export default function PipelineLab({ recipes }) {
         ))}
       </div>
 
-      {/* 显示结果数量 */}
+      {/* Results count */}
       <div className="mt-6 text-center text-sm text-slate-400">
-        共 {filteredRecipes.length} 个 Pipeline 组合
+        {t('pipelineResults.count', { count: filteredRecipes.length })}
       </div>
     </section>
   )

@@ -78,5 +78,32 @@
   "search": {
     "placeholder": "搜索命令、概念、场景、参数...",
     "noResults": "未找到匹配的内容"
+  },
+  "categories": {
+    "file-operations": "文件操作",
+    "text-processing": "文本处理",
+    "archives": "压缩归档",
+    "networking": "网络工具",
+    "system-info": "系统信息",
+    "permissions": "权限管理",
+    "high": "高频",
+    "medium": "中频",
+    "low": "低频",
+    "beginner": "入门",
+    "intermediate": "进阶",
+    "advanced": "高级"
+  },
+  "pipelineCategories": {
+    "all": "全部",
+    "basic": "基础",
+    "network": "网络",
+    "system": "系统",
+    "analysis": "分析",
+    "development": "开发",
+    "security": "安全",
+    "advanced": "高级"
+  },
+  "pipelineResults": {
+    "count": "共 {{count}} 个 Pipeline 组合"
   }
 }

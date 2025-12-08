@@ -120,37 +120,19 @@ export default function TabNavigation({ onTabChange, onCategoryChange }) {
       {/* Sub-categories for selected tab */}
       {activeTab !== 'all' && tabCategories.length > 0 && (
         <div className="flex flex-wrap gap-2">
-          {tabCategories.map((category) => {
-            // Translate category names
-            const categoryLabel = {
-              'file-operations': '文件操作',
-              'text-processing': '文本处理',
-              'archives': '压缩归档',
-              'networking': '网络工具',
-              'system-info': '系统信息',
-              'permissions': '权限管理',
-              'high': '高频',
-              'medium': '中频',
-              'low': '低频',
-              'beginner': '入门',
-              'intermediate': '进阶',
-              'advanced': '高级'
-            }[category] || category
-
-            return (
-              <button
-                key={category}
-                onClick={() => handleCategoryClick(category)}
-                className={`rounded-full px-4 py-2 text-sm transition-all ${
-                  activeCategory === category
-                    ? 'bg-sky-100 text-sky-900 shadow-[0_4px_12px_rgba(135,206,250,0.3)]'
-                    : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
-                }`}
-              >
-                {categoryLabel}
-              </button>
-            )
-          })}
+          {tabCategories.map((category) => (
+            <button
+              key={category}
+              onClick={() => handleCategoryClick(category)}
+              className={`rounded-full px-4 py-2 text-sm transition-all ${
+                activeCategory === category
+                  ? 'bg-sky-100 text-sky-900 shadow-[0_4px_12px_rgba(135,206,250,0.3)]'
+                  : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
+              }`}
+            >
+              {t(`categories.${category}`, category)}
+            </button>
+          ))}
         </div>
       )}
     </div>
