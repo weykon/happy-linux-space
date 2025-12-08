@@ -2,8 +2,9 @@ import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 
 export default function PipelineLab({ recipes }) {
-  const { t } = useTranslation('common')
+  const { t, i18n } = useTranslation('common')
   const [selectedCategory, setSelectedCategory] = useState('all')
+  const lang = i18n.language
 
   const categories = [
     { id: 'all', emoji: '🎭' },
@@ -55,12 +56,12 @@ export default function PipelineLab({ recipes }) {
       <div className="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         {filteredRecipes.map((recipe) => (
           <div
-            key={recipe.title}
+            key={typeof recipe.title === 'object' ? recipe.title[lang] : recipe.title}
             className="group rounded-3xl border border-slate-100 bg-gradient-to-br from-white to-slate-50 p-6 transition-all hover:shadow-xl hover:scale-[1.02]"
           >
             <div className="flex items-start justify-between">
               <p className="text-sm font-semibold uppercase tracking-[0.3em] text-slate-400">
-                {recipe.title}
+                {typeof recipe.title === 'object' ? recipe.title[lang] : recipe.title}
               </p>
               {recipe.difficulty && (
                 <span className={`rounded-full px-2 py-1 text-xs font-medium ${difficultyColors[recipe.difficulty]}`}>
@@ -71,7 +72,9 @@ export default function PipelineLab({ recipes }) {
             <div className="mt-4 rounded-2xl bg-slate-900 p-4">
               <p className="font-mono text-xs leading-relaxed text-slate-100">{recipe.chain}</p>
             </div>
-            <p className="mt-4 text-sm leading-relaxed text-slate-600">{recipe.idea}</p>
+            <p className="mt-4 text-sm leading-relaxed text-slate-600">
+              {typeof recipe.idea === 'object' ? recipe.idea[lang] : recipe.idea}
+            </p>
           </div>
         ))}
       </div>

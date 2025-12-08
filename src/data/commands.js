@@ -3317,86 +3317,158 @@ export const commands = [
 // Export pipeline recipes - Advanced combinations
 export const pipelineRecipes = [
   {
-    title: '晨间侦查：列出演员再锁目标',
+    title: {
+      en: 'Morning Check: List & Lock Scripts',
+      zh: '晨间侦查：列出演员再锁目标'
+    },
     chain: 'ls -1 | grep ".sh" | xargs -I{} chmod +x {}',
-    idea: '先点名，再筛脚本，最后赋予执行权限，像排练前给表演者贴彩色徽章。',
+    idea: {
+      en: 'List files, filter scripts, then grant execute permissions—like giving performers their badges before rehearsal.',
+      zh: '先点名，再筛脚本，最后赋予执行权限，像排练前给表演者贴彩色徽章。'
+    },
     category: 'basic',
     difficulty: 'beginner'
   },
   {
-    title: '日志圣代：分层查看甜与咸',
+    title: {
+      en: 'Log Sundae: Layer & Watch',
+      zh: '日志圣代：分层查看甜与咸'
+    },
     chain: 'tail -f app.log | grep --color=never "WARN" | tee warn.log',
-    idea: '即看即存，tee 像把酱汁分到现场杯与备用瓶。',
+    idea: {
+      en: 'Watch and save simultaneously—tee splits output like pouring sauce into both serving cup and storage bottle.',
+      zh: '即看即存，tee 像把酱汁分到现场杯与备用瓶。'
+    },
     category: 'basic',
     difficulty: 'beginner'
   },
   {
-    title: '打包航线：过滤 + 计算 + 打包',
+    title: {
+      en: 'TODO Packager: Filter + Extract + Archive',
+      zh: '打包航线：过滤 + 计算 + 打包'
+    },
     chain: `grep -r "TODO" src | awk '{ print $1 }' | xargs tar -czf todos.tar.gz`,
-    idea: '把 TODO 清单按文件聚合后一次打包，像把便利贴撕下塞进收纳袋。',
+    idea: {
+      en: 'Aggregate TODO items by file and archive them—like collecting sticky notes into a storage bag.',
+      zh: '把 TODO 清单按文件聚合后一次打包，像把便利贴撕下塞进收纳袋。'
+    },
     category: 'basic',
     difficulty: 'intermediate'
   },
   {
-    title: '网络诊断圣代：IP + 路由 + DNS',
+    title: {
+      en: 'Network Diagnosis: IP + Route + DNS',
+      zh: '网络诊断圣代：IP + 路由 + DNS'
+    },
     chain: 'ip addr show | grep inet && ip route | head -3 && dig +short google.com',
-    idea: '三层诊断：先看本机地址，再看路由配置，最后测试DNS解析，像检查舞台的网络、灯光、音响。',
+    idea: {
+      en: 'Three-layer check: local address, routing config, DNS resolution—like inspecting network, lights, and sound on stage.',
+      zh: '三层诊断：先看本机地址，再看路由配置，最后测试DNS解析，像检查舞台的网络、灯光、音响。'
+    },
     category: 'network',
     difficulty: 'intermediate'
   },
   {
-    title: '端口侦探：找出占用者',
+    title: {
+      en: 'Port Detective: Find Who\'s Using',
+      zh: '端口侦探：找出占用者'
+    },
     chain: 'lsof -i :8080 | tail -n +2 | awk \'{print $2}\' | xargs ps -p',
-    idea: '找到占用端口的PID，再查看进程详情，像追踪谁在占用化妆间。',
+    idea: {
+      en: 'Find PID using the port, then inspect process details—like tracking who\'s occupying the dressing room.',
+      zh: '找到占用端口的PID，再查看进程详情，像追踪谁在占用化妆间。'
+    },
     category: 'network',
     difficulty: 'intermediate'
   },
   {
-    title: '磁盘清理师：找大户删临时',
+    title: {
+      en: 'Disk Cleaner: Find Large Temp Files',
+      zh: '磁盘清理师：找大户删临时'
+    },
     chain: 'find . -type f -size +10M -mtime +7 -exec ls -lh {} \\; | head -10',
-    idea: '找出7天前大于10MB的临时文件，先预览再决定删除，像整理道具仓库。',
+    idea: {
+      en: 'Find temp files >10MB older than 7 days, preview before deletion—like organizing the prop warehouse.',
+      zh: '找出7天前大于10MB的临时文件，先预览再决定删除，像整理道具仓库。'
+    },
     category: 'system',
     difficulty: 'intermediate'
   },
   {
-    title: '日志统计大师：IP访问排行',
+    title: {
+      en: 'Log Analyst: Top IP Visitors',
+      zh: '日志统计大师：IP访问排行'
+    },
     chain: 'cat access.log | awk \'{print $1}\' | sort | uniq -c | sort -rn | head -10',
-    idea: '提取IP → 排序 → 去重计数 → 倒序，找出访问最多的前10个IP，像统计最受欢迎的观众。',
+    idea: {
+      en: 'Extract IPs → sort → count unique → reverse sort—find top 10 visitors, like ranking most popular audience members.',
+      zh: '提取IP → 排序 → 去重计数 → 倒序，找出访问最多的前10个IP，像统计最受欢迎的观众。'
+    },
     category: 'analysis',
     difficulty: 'intermediate'
   },
   {
-    title: '代码考古学家：提交历史',
+    title: {
+      en: 'Code Archaeologist: Commit History',
+      zh: '代码考古学家：提交历史'
+    },
     chain: 'git log --oneline --since="1 week ago" | wc -l',
-    idea: '统计一周提交数，像回顾排练进度表。',
+    idea: {
+      en: 'Count commits from last week—like reviewing rehearsal progress.',
+      zh: '统计一周提交数，像回顾排练进度表。'
+    },
     category: 'development',
     difficulty: 'beginner'
   },
   {
-    title: '权限安全审计：找777漏洞',
+    title: {
+      en: 'Security Audit: Find 777 Permissions',
+      zh: '权限安全审计：找777漏洞'
+    },
     chain: 'find . -type f -perm 777 -ls | awk \'{print $11}\' | head -20',
-    idea: '找出所有权限过于开放的文件，潜在安全风险，像检查后台门锁。',
+    idea: {
+      en: 'Find files with overly permissive access, potential security risk—like checking backstage door locks.',
+      zh: '找出所有权限过于开放的文件，潜在安全风险，像检查后台门锁。'
+    },
     category: 'security',
     difficulty: 'intermediate'
   },
   {
-    title: '进程资源猎手：找内存大户',
+    title: {
+      en: 'Resource Hunter: Top Memory Users',
+      zh: '进程资源猎手：找内存大户'
+    },
     chain: 'ps aux --sort=-%mem | head -6 | awk \'{print $2, $4, $11}\'',
-    idea: '按内存使用倒序，提取PID、内存占用、进程名，像找出最耗体力的演员。',
+    idea: {
+      en: 'Sort by memory usage descending, extract PID, memory %, process name—like finding the most demanding performers.',
+      zh: '按内存使用倒序，提取PID、内存占用、进程名，像找出最耗体力的演员。'
+    },
     category: 'system',
     difficulty: 'intermediate'
   },
   {
-    title: 'API快速测试：获取JSON字段',
+    title: {
+      en: 'API Quick Test: Extract JSON Field',
+      zh: 'API快速测试：获取JSON字段'
+    },
     chain: 'curl -s https://api.github.com/users/github | grep -o \'"login": "[^"]*"\'',
-    idea: '获取JSON → 提取特定字段，快速验证API返回，像试吃甜品的一口。',
+    idea: {
+      en: 'Fetch JSON → extract specific field, quickly verify API response—like tasting a bite of dessert.',
+      zh: '获取JSON → 提取特定字段，快速验证API返回，像试吃甜品的一口。'
+    },
     category: 'network',
     difficulty: 'advanced'
   },
   {
-    title: '文件去重专家：查找重复',
+    title: {
+      en: 'Duplicate Finder: Detect Identical Files',
+      zh: '文件去重专家：查找重复'
+    },
     chain: 'find . -type f -exec md5sum {} + | sort | uniq -w32 -dD',
-    idea: '计算所有文件MD5 → 排序 → 找出重复，像找出剧本的副本。',
+    idea: {
+      en: 'Calculate MD5 for all files → sort → find duplicates—like discovering script copies.',
+      zh: '计算所有文件MD5 → 排序 → 找出重复，像找出剧本的副本。'
+    },
     category: 'advanced',
     difficulty: 'advanced'
   }
